@@ -25,7 +25,7 @@ if uploaded:
     X = df.iloc[:, :-1]
     y = df.iloc[:, -1]
 
-    model = pickle.load(open(model_name + ".pkl","rb"))
+    model = pickle.load(open("model/"+model_name + ".pkl","rb"))
     preds = model.predict(X)
 
     st.subheader("Metrics")
